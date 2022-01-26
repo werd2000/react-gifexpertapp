@@ -8,10 +8,12 @@ export const AddCategory = ({setCategories}) => {
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
+        // console.log('handleInputChange llamado');
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log('handleSubmit llamado', inputValue);
         if (inputValue.trim().length > 2) {
             setCategories( cate => [inputValue, ...cate ]);
             // mando un string vacio para limppiar el input

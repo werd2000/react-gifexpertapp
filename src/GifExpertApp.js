@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({ defaultCategory = []}) => {
 
     // Desestructuro el useState
-    const [categories, setCategories] = useState(['One Punch']);
+    const [categories, setCategories] = useState(defaultCategory);
     
     // const handleAdd = () => {
     //     // setCategories([...categories, 'HunterXHunter']);
@@ -26,6 +26,7 @@ export const GifExpertApp = () => {
                         /> )
                 }
             </ol>
+            <p><img src='../public/Poweredby_100px-White_VertLogo.png' alt='Powered by GIPHY'/></p>
         </>
     )
 }
